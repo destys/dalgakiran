@@ -3,10 +3,24 @@
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	justify-content: center;
+	align-items: center;
+	padding: rem(17) rem(37);
+	border-radius: 2px;
+	background-color: $red;
+	color: #fff;
+	text-transform: uppercase;
+
+	transition: background 0.2s ease-in-out;
+
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: darken($red, 10%);
 		}
+	}
+
+	&:active {
+		background-color: darken($red, 20%);
 	}
 	&._fw {
 		width: 100%;
