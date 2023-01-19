@@ -15,3 +15,14 @@
         }
     }
 }
+
+.crumbs {
+    padding-bottom: rem(10);
+    border-bottom: 1px solid #353535;
+    color: #353535;
+}
+
+._h1 {
+    line-height: math.div(44, 32);
+    font-size: rem(32);
+}

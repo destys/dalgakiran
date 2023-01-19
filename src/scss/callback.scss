@@ -1,7 +1,11 @@
 .callback {
-    margin-bottom: rem(75);
     padding: rem(30) 0;
-    background: url('@img/needhelp-bg.jpg') 0 0 no-repeat;
+    background: url("@img/needhelp-bg.jpg") 0 0 no-repeat;
+
+    &._text-white {
+        color: #fff;
+    }
+
     // .callback__container
     &__container {
     }
@@ -20,9 +24,14 @@
             }
         }
         .input {
+            ._text-white & {
+                border-color: #fff;
+                color: #fff;
+            }
         }
         .button {
             margin-bottom: rem(30);
+            font-weight: 600;
         }
     }
 }
