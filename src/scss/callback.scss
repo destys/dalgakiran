@@ -1,0 +1,28 @@
+.callback {
+    margin-bottom: rem(75);
+    padding: rem(30) 0;
+    background: url('@img/needhelp-bg.jpg') 0 0 no-repeat;
+    // .callback__container
+    &__container {
+    }
+    // .callback__title
+    &__title {
+        text-align: center;
+    }
+    // .callback__form
+    &__form {
+        &.form {
+            // .form__row
+            &__row {
+            }
+            // .form__privacy
+            &__privacy {
+            }
+        }
+        .input {
+        }
+        .button {
+            margin-bottom: rem(30);
+        }
+    }
+}

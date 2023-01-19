@@ -1,0 +1,14 @@
+.news {
+    margin-bottom: rem(75);
+    // .news__container
+    &__container {
+    }
+    // .news__title
+    &__title {
+        text-align: center;
+    }
+    // .news__list
+    &__list {
+        @include gridCards(fit, rem(300), 1fr, rem(30));
+    }
+}

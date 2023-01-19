@@ -1,1 +1,17 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+._h2 {
+    margin-bottom: rem(55);
+    font: 800 rem(33) / rem(42) Open Sans;
+}
+
+._text {
+    font-weight: 600;
+    line-height: math.div(23, 14);
+
+    p {
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+}

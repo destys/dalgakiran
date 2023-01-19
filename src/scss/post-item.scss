@@ -1,0 +1,73 @@
+.post {
+    position: relative;
+    max-width: rem(320);
+
+    // .post__date
+    &__date {
+        @extend %df-center;
+        position: absolute;
+        top: rem(-20);
+        right: rem(-15);
+        background-color: $red;
+        color: #fff;
+
+        width: rem(140);
+        height: rem(40);
+    }
+    // .post__image
+    &__image {
+        @extend %df-center;
+        height: rem(214);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    // .post__title
+    &__title {
+        margin-bottom: rem(10);
+        font-family: $fontMs;
+        font-weight: 700;
+        line-height: math.div(23, 18);
+        font-size: rem(17);
+
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+    }
+    // .post__text
+    &__text {
+        margin-bottom: rem(10);
+        color: #626262;
+        min-height: rem(106);
+
+        -webkit-line-clamp: 5;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    // .post__readmore
+    &__readmore {
+        display: flex;
+        gap: rem(18);
+        padding: rem(9) rem(15);
+        width: fit-content;
+        border: 1px solid;
+        font-weight: 500;
+        font-family: $fontMs;
+        font-size: rem(14);
+        color: $red;
+
+        &::after {
+            content: "";
+            display: block;
+            background: url("@img/arr-right-red.svg") center no-repeat;
+            width: rem(25);
+            height: rem(13);
+        }
+    }
+}

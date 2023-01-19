@@ -1,3 +1,63 @@
 //====================================================================================================
+.footer {
+    padding: rem(50) 0;
+    background-color: $mainColor;
+    box-shadow: inset 0px 4px 40px #000000;
+
+    // .footer__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    // .footer__logo
+    &__logo {
+        flex: 0 0 rem(254);
+        span {
+            display: block;
+            margin-top: rem(18);
+            font-weight: 700;
+            line-height: math.div(34, 27);
+            font-size: rem(27);
+            color: #2e2e30;
+            text-align: center;
+        }
+    }
+    // .footer__contacts
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+
+        flex: 1 1 auto;
+
+        max-width: rem(745);
+    }
+}
+.contacts-footer {
+    // .contacts-footer__item
+    &__item {
+        
+        color: #fff;
+    }
+    // .contacts-footer__title
+    &__title {
+        font-weight: 700;
+        line-height: math.div(23, 18);
+    }
+    // .contacts-footer__value
+    &__value {
+        font-weight: 600;
+        line-height: math.div(18, 14);
+        text-decoration: underline !important;
+    }
+
+    a.contacts-footer__value {
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: $red;
+        }
+    }
+}
 
 //====================================================================================================

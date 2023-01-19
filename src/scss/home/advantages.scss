@@ -1,0 +1,37 @@
+.advantages {
+    margin-bottom: rem(82);
+    // .advantages__container
+    &__container {
+    }
+    // .advantages__title
+    &__title {
+        text-align: center;
+    }
+    // .advantages__list
+    &__list {
+        @include gridCards(fit, rem(200), 1fr, rem(50));
+    }
+    // .advantages__item
+    &__item {
+    }
+}
+.item-advantages {
+    // .item-advantages__icon
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto rem(32);
+        width: rem(130);
+        height: rem(130);
+
+        border: 1px solid #000;
+        border-radius: 50%;
+    }
+    // .item-advantages__text
+    &__text {
+        font-weight: 600;
+        line-height: math.div(23, 14);
+        text-align: center;
+    }
+}

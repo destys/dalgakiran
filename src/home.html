@@ -9,6 +9,113 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 			@@include('html/_intro.htm',{})
+			<section class="about">
+				<div class="about__image">
+					<img data-src="@img/about.jpg" alt="about">
+				</div>
+				<div class="about__content">
+					<h2 class="about__title _h2">О компании</h2>
+					<div class="about__text">
+						<p>История турецкой компании DALGAKIRAN COMPRESSOR началась в 1965 году с выпуска
+							профессиональной компрессорной техники. Благодаря продуманному менеджменту и внедрению на
+							производстве новейших технологий компания сумела существенно нарастить объем выпуска своей
+							продукции и расширить географию ее поставок, выйдя на международный рынок, завоевав
+							достойное место среди известных производителей.</p>
+						<p>Сегодня международный промышленный холдинг DALGAKIRAN является лидером по производству и
+							поставкам компрессоров на рынке Турции, а также продает свое оборудование в 130 стран мира.
+							Представительства и филиалы холдинга открыты в Германии, Великобритании, США, России и в
+							Украине.</p>
+					</div>
+					<a href="about.html" class="about__link">Подробнее</a>
+				</div>
+			</section>
+			<section class="callback">
+				<div class="callback__container">
+					<h2 class="callback__title _h2">Нужна помощь?</h2>
+					<form action="#" class="callback__form form">
+						<div class="form__row">
+							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+								placeholder="*Ваше имя" class="input">
+							<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
+								placeholder="*Ваш телефон" class="input">
+							<input autocomplete="off" type="email" name="form[]" data-error="Ошибка"
+								placeholder="*Ваша почта" class="input">
+						</div>
+						<button type="submit" class="button">Отправить</button>
+						<p class="form__privacy">
+							*На сайте действует политика конфедициональности
+							персональных данных
+						</p>
+					</form>
+				</div>
+			</section>
+			<section class="advantages">
+				<div class="advantages__container">
+					<h2 class="advantages__title _h2">Наши преимущества:</h2>
+					<div class="advantages__list">
+						<div class="advantages__item item-advantages">
+							<div class="item-advantages__icon">
+								<img src="@img/advantages/icon1.svg" alt="">
+							</div>
+							<div class="item-advantages__text">Реализация проектов любой сложности "под ключ",
+								консалтинг
+								и сервисное сопровождение</div>
+						</div>
+						<div class="advantages__item item-advantages">
+							<div class="item-advantages__icon">
+								<img src="@img/advantages/icon2.svg" alt="">
+							</div>
+							<div class="item-advantages__text">Сервис и поддержка
+								на все категории товара</div>
+						</div>
+						<div class="advantages__item item-advantages">
+							<div class="item-advantages__icon">
+								<img src="@img/advantages/icon3.svg" alt="">
+							</div>
+							<div class="item-advantages__text">Большой опыт -
+								более 2,5 тыс. проектов в РФ</div>
+						</div>
+						<div class="advantages__item item-advantages">
+							<div class="item-advantages__icon">
+								<img src="@img/advantages/icon4.svg" alt="">
+							</div>
+							<div class="item-advantages__text">Разумная цена.
+								Средний ценовой сегмент и высокие показатели надёжности</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="sertificate">
+				<div class="sertificate__container">
+					<div class="sertificate__content _text">
+						<h2 class="_h2">Группа компаний «Волгаремсервис»
+							официальный представитель DALGAKIRAN</h2>
+						<p>История турецкой компании DALGAKIRAN COMPRESSOR началась
+							в 1965 году с выпуска профессиональной компрессорной техники. Благодаря продуманному
+							менеджменту и внедрению на производстве новейших технологий компания сумела существенно
+							нарастить объем выпуска своей продукции и расширить географию ее поставок, выйдя на
+							международный рынок, завоевав достойное место среди известных производителей.</p>
+						<p>Сегодня международный промышленный холдинг DALGAKIRAN является лидером по производству и
+							поставкам компрессоров на рынке Турции, а также продает свое оборудование в 130 стран мира.
+							Представительства и филиалы холдинга открыты в Германии, Великобритании, США, России и в
+							Украине.</p>
+					</div>
+					<div class="sertificate__image">
+						<img src="@img/sertificate.png" alt="">
+					</div>
+				</div>
+			</section>
+			<section class="news">
+				<div class="news__container">
+					<h2 class="news__title _h2">Новости</h2>
+					<div class="news__list">
+						@@include('html/_post-item.htm',{})
+						@@include('html/_post-item.htm',{})
+						@@include('html/_post-item.htm',{})
+						@@include('html/_post-item.htm',{})
+					</div>
+				</div>
+			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

@@ -1,0 +1,17 @@
+.sertificate {
+    margin-bottom: rem(75);
+    padding: rem(64) 0;
+    background: #d5d8dd;
+    // .sertificate__container
+    &__container {
+        display: flex;
+        gap: rem(45);
+    }
+    // .sertificate__text
+    &__text {
+    }
+    // .sertificate__image
+    &__image {
+        drop-shadow: 0px 0px 12px rgba(0, 0, 0, 0.48);
+    }
+}
