@@ -1,0 +1,114 @@
+.product {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: rem(20);
+    background-color: #fff;
+    font-family: $fontMs;
+    font-size: rem(14);
+    position: relative;
+
+    & > * {
+        border-left: 1px solid #000;
+        padding: rem(11);
+        align-self: center;
+    }
+    // .product__compare
+    &__compare {
+        position: absolute;
+        top: rem(10);
+        right: rem(17);
+        padding: 0;
+        z-index: 1;
+        border: 0;
+        cursor: pointer;
+
+        input {
+            opacity: 0;
+            &:checked + label {
+                &::before{
+                    content:'выбран';
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: $red;
+                }
+            }
+        }
+
+        label {
+            cursor: pointer;
+            &::before{
+                content:'к сравнению';
+                text-decoration: underline;
+            }
+        }
+    }
+    // .product__thumb
+    &__thumb {
+        display: block;
+        padding-left: rem(11);
+        border: 0;
+        width: rem(158);
+    }
+    // .product__title
+    &__title {
+        min-width: rem(189);
+    }
+    // .product__category
+    &__category {
+        margin-bottom: rem(10);
+        color: $red;
+    }
+    // .product__name
+    &__name {
+        font-weight: 700;
+        font-size: rem(18);
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: $red;
+        }
+    }
+    // .product__param
+    &__param {
+        text-align: center;
+        font-size: rem(16);
+        width: rem(178);
+    }
+    // .product__actions
+    &__actions {
+        padding-top: rem(36);
+        border: 0;
+    }
+    // .product__price
+    &__price {
+        display: flex;
+        justify-content: center;
+        gap: rem(5);
+        margin-bottom: rem(9);
+        span {
+            font-size: rem(18);
+            &:first-child {
+                font-weight: 700;
+            }
+        }
+    }
+    // .product__link
+    &__link {
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: rem(18);
+        text-transform: lowercase;
+    }
+}
+.asd {
+    // ._param1
+    &_param1 {
+    }
+    // ._param2
+    &_param2 {
+    }
+    // ._param3
+    &_param3 {
+    }
+}

@@ -27,6 +27,54 @@
         margin-top: rem(10);
         margin-bottom: rem(47);
     }
+    // .catalog__filters
+    &__filters {
+        margin-bottom: rem(24);
+        background: #2d2c2c;
+        padding: rem(18);
+    }
+    // .catalog__view
+    &__view {
+        display: flex;
+        align-items: center;
+        gap: rem(30);
+        margin-bottom: rem(24);
+    }
+    // .catalog__pagination
+    &__pagination {
+        margin-left: auto;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: rem(23);
+
+            a {
+                @media (any-hover: hover) {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .disabled {
+                display: none;
+            }
+            .active {
+                color: $red;
+            }
+            .control {
+            }
+        }
+    }
+    // .catalog__sorting
+    &__sorting {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $mainColor;
+        color: #fff;
+    }
     // .catalog__list
     &__list {
         @include gridCards("fit", rem(250), 1fr, rem(30));
@@ -39,10 +87,14 @@
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.72);
         }
     }
+    // .catalog__products
+    &__products {
+        margin-bottom: rem(50);
+    }
     // .catalog__text
     &__text {
         font-family: $fontMs;
-        color: #9b9b9b;
+        color: $mainColor;
 
         a {
             color: $red;
@@ -57,6 +109,13 @@
             &:not(:last-child) {
                 margin-bottom: rem(16);
             }
+        }
+
+        h2 {
+            margin-bottom: rem(20);
+            font-weight: 700;
+            font-size: rem(32);
+            color: $mainColor;
         }
     }
 }
@@ -169,5 +228,213 @@
         font-size: rem(18);
         text-align: center;
         color: #fff;
+    }
+}
+
+.filters-catalog {
+    // .filters-catalog__ranges
+    &__ranges {
+        @include gridCards("fit", rem(200), 1fr, rem(17));
+    }
+    // .filters-catalog__range
+    &__range {
+        padding: rem(10);
+        border: 0.5px solid #f6f6f6;
+        border-radius: 12px;
+        color: #fff;
+
+        .noUi-tooltip {
+            display: none;
+        }
+    }
+    // .filters-catalog__add
+    &__add {
+        margin-top: rem(20);
+        color: #fff;
+    }
+}
+
+.range-filter {
+    // .range-filter__title
+    &__title {
+        margin-bottom: rem(10);
+        font-family: $fontMs;
+        font-weight: 700;
+        font-size: rem(14);
+        text-align: center;
+    }
+    // .range-filter__inputs
+    &__inputs {
+        display: flex;
+        justify-content: space-evenly;
+        gap: rem(20);
+        margin-top: rem(11);
+    }
+    // .range-filter__input
+    &__input {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+
+        span {
+            font-family: $fontMs;
+            font-weight: 600;
+            font-size: rem(14);
+        }
+
+        .input {
+            padding-left: rem(5);
+            background-color: #fff;
+        }
+    }
+}
+.add-filter-catalog {
+    // .add-filter-catalog__wrapper
+    &__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    // .add-filter-catalog__title
+    &__title {
+        font-family: $fontMs;
+        font-weight: 600;
+        font-size: rem(14);
+
+        ._spoller-init & {
+            cursor: pointer;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                background-color: #fff;
+                height: 2px;
+                width: 15px;
+                transition: transform 0.5s ease 0s;
+            }
+            &::before {
+                transform: translate(-75%, -50%) rotate(-40deg);
+            }
+            &::after {
+                transform: translate(0, -50%) rotate(40deg);
+            }
+            &._spoller-active {
+                &::before {
+                    transform: translateX(-75%) rotate(40deg);
+                }
+                &::after {
+                    transform: rotate(-40deg);
+                }
+            }
+        }
+    }
+    // .add-filter-catalog__innter
+    &__innter {
+        @include gridCards("fit", rem(100), 1fr, rem(20));
+        margin-bottom: rem(20);
+    }
+    // .add-filter-catalog__item
+    &__item {
+        .select__body {
+            color: $mainColor;
+        }
+    }
+
+    // .add-filter-catalog__btns
+    &__btns {
+        display: flex;
+        justify-content: flex-end;
+        gap: rem(20);
+
+        .button {
+            padding: rem(11) rem(17);
+        }
+    }
+}
+.item-add-filter {
+    // .item-add-filter__title
+    &__title {
+        margin-bottom: rem(10);
+        font-family: $fontMs;
+        font-weight: 700;
+        font-size: rem(14);
+    }
+}
+.filter {
+    // .filter_1
+    &_1 {
+    }
+    // .filter_2
+    &_2 {
+    }
+    // .filter_3
+    &_3 {
+    }
+    // .filter_4
+    &_4 {
+    }
+    // .filter_5
+    &_5 {
+    }
+    // .filter_6
+    &_6 {
+    }
+}
+
+.view-catalog {
+    // .view-catalog__total
+    &__total {
+    }
+    // .view-catalog__on-page
+    &__on-page {
+        display: flex;
+        align-items: center;
+        gap: rem(9);
+    }
+}
+
+.sorting {
+    // .sorting__list
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        width: 100%;
+    }
+    // .sorting__title
+    &__title {
+        text-align: center;
+        font-weight: 600;
+        font-size: rem(15);
+        width: rem(158);
+        align-self: center;
+    }
+    // .sorting__item
+    &__item {
+        align-self: center;
+        font-weight: 600;
+        font-size: rem(14);
+        text-align: center;
+        max-width: rem(140);
+    }
+    // .sorting__compare
+    &__compare {
+        display: flex;
+        align-items: center;
+        gap: rem(5);
+        flex: 0 0 rem(175);
+        padding: rem(6) rem(18);
+        background-color: $red;
+
+        font-family: $fontMs;
+        font-weight: 600;
+        font-size: rem(14);
+    }
+}
+
+.products + .pagination {
+    margin-bottom: rem(75);
+    ul {
+        justify-content: flex-end;
     }
 }

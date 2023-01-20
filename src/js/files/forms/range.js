@@ -12,56 +12,57 @@ export function rangeInit() {
 
 	if (rangeSlider.length) {
 		rangeSlider.forEach(slider => {
-			var stepsSlider = slider.querySelector('.slider');
+			let stepsSlider = slider.querySelector('.slider');
 
-			var input0 = slider.querySelector('.input_0');
-			var input1 = slider.querySelector('.input_1');
-			var inputs = [input0, input1];
+			let input0 = slider.querySelector('.input_0');
+			let input1 = slider.querySelector('.input_1');
+			let inputs = [input0, input1];
+			console.log('inputs: ', inputs);
+
+			let textFrom = stepsSlider.getAttribute('data-from');
+			textFrom = Math.floor(+textFrom)
+			console.log('textFrom: ', textFrom);
+			let textTo = stepsSlider.getAttribute('data-to');
+			textTo = Math.floor(+textTo)
+			console.log('textTo: ', textTo);
 
 			noUiSlider.create(stepsSlider, {
-				start: [20, 80],
+				start: [+textFrom, +textTo],
 				connect: true,
-				tooltips: [true, true],
+				tooltips: [false, false],
+				format: {
+					from: function (value) {
+						return parseInt(value);
+					},
+					to: function (value) {
+						return parseInt(value);
+					}
+				},
 				range: {
-					'min': [0],
-					'max': 200
+				'min': textFrom,
+					'max': textTo,
 				}
-			});
+		});
 
-			stepsSlider.noUiSlider.on('update', function (values, handle) {
-				inputs[handle].value = values[handle];
-			});
-		})
-	}
+		stepsSlider.noUiSlider.on('update', function (values, handle) {
+			inputs[handle].value = values[handle];
+		});
 
-	/* if (priceSlider) {
-		let textFrom = priceSlider.getAttribute('data-from');
-		let textTo = priceSlider.getAttribute('data-to');
-		noUiSlider.create(priceSlider, {
-			start: 0, // [0,200000]
-			connect: [true, false],
-			range: {
-				'min': [0],
-				'max': [200000]
+		input0.addEventListener('change', setPriceValues);
+		input1.addEventListener('change', setPriceValues);
+
+		function setPriceValues() {
+			let priceStartValue;
+			let priceEndValue;
+			if (input0.value != '') {
+				priceStartValue = input0.value;
 			}
-		}); */
-	/*
-	const priceStart = document.getElementById('price-start');
-	const priceEnd = document.getElementById('price-end');
-	priceStart.addEventListener('change', setPriceValues);
-	priceEnd.addEventListener('change', setPriceValues);
-	*/
-	/* function setPriceValues() {
-		let priceStartValue;
-		let priceEndValue;
-		if (priceStart.value != '') {
-			priceStartValue = priceStart.value;
+			if (input1.value != '') {
+				priceEndValue = input1.value;
+			}
+			stepsSlider.noUiSlider.set([priceStartValue, priceEndValue]);
 		}
-		if (priceEnd.value != '') {
-			priceEndValue = priceEnd.value;
-		}
-		priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
-	}
-} */
+	})
+}
 }
 rangeInit();

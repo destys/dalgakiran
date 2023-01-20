@@ -10,16 +10,28 @@ button {
 	justify-content: center;
 	align-items: center;
 	padding: rem(17) rem(37);
+	border: 1px solid $red;
 	border-radius: 2px;
 	background-color: $red;
 	color: #fff;
 	text-transform: uppercase;
 
-	transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out, border-coor 0.2s ease-in-out;
+
+	&_transparent {
+		background-color: transparent;
+		border-color: #fff;
+		color: #fff;
+
+		&:hover {
+			border-color: $red;
+		}
+	}
 
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: darken($red, 10%);
+			border-color: darken($red, 10%);
 		}
 	}
 
