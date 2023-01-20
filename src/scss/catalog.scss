@@ -8,8 +8,11 @@
     // .catalog__wrapper
     &__wrapper {
         display: grid;
-        grid-template-columns: rem(308) 1fr;
         gap: rem(30);
+
+        @media (min-width: $mobile) {
+            grid-template-columns: rem(308) 1fr;
+        }
     }
     // .catalog__side
     &__side {
@@ -26,7 +29,7 @@
     }
     // .catalog__list
     &__list {
-        @include gridCards("fit", rem(300), 1fr, rem(30));
+        @include gridCards("fit", rem(250), 1fr, rem(30));
         margin-bottom: rem(25);
     }
     // .catalog__item

@@ -3,10 +3,23 @@
     align-items: center;
     gap: rem(70);
 
-    margin-bottom: rem(76);
+    @include adaptiveValue("margin-bottom", 76, 35);
+    
+    @media (max-width:$tablet){
+        padding: 0 rem(15);
+    }
 
     // .about__image
     &__image {
+        display: none;
+        @media (min-width:$tablet){
+             display: block; 
+             flex: 0 0 50%;
+     
+             img {
+                 width: 100%;
+             }
+        }
     }
     // .about__content
     &__content {

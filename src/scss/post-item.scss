@@ -1,18 +1,26 @@
 .post {
     position: relative;
-    max-width: rem(320);
 
     // .post__date
     &__date {
         @extend %df-center;
         position: absolute;
-        top: rem(-20);
-        right: rem(-15);
+        top: rem(0);
+        right: rem(0);
         background-color: $red;
         color: #fff;
 
         width: rem(140);
-        height: rem(40);
+        height: rem(20);
+
+        @media (min-width: $mobileSmall) {
+            height: rem(40);
+            top: rem(-20);
+        }
+
+        @media (min-width: $tablet) {
+            right: rem(-15);
+        }
     }
     // .post__image
     &__image {
@@ -37,7 +45,6 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         overflow: hidden;
-
     }
     // .post__text
     &__text {
@@ -53,7 +60,8 @@
     // .post__readmore
     &__readmore {
         display: flex;
-        gap: rem(18);
+        align-items: center;
+        gap: rem(14);
         padding: rem(9) rem(15);
         width: fit-content;
         border: 1px solid;
@@ -62,12 +70,22 @@
         font-size: rem(14);
         color: $red;
 
-        &::after {
-            content: "";
-            display: block;
-            background: url("@img/arr-right-red.svg") center no-repeat;
-            width: rem(25);
-            height: rem(13);
+        transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $red;
+            color: #fff;
+
+            path {
+                stroke: #fff;
+            }
+        }
+
+        svg {
+
+            path {
+                transition: stroke 0.2s ease-in-out;
+            }
         }
     }
 }

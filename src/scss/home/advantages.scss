@@ -7,10 +7,14 @@
     // .advantages__title
     &__title {
         text-align: center;
+        @media (max-width: $mobileSmall) {
+            margin-bottom: rem(40);
+        }
     }
     // .advantages__list
     &__list {
-        @include gridCards(fit, rem(200), 1fr, rem(50));
+        @include gridCards(fit, rem(200), 1fr);
+        @include adaptiveValue("gap", 50, 20);
     }
     // .advantages__item
     &__item {
@@ -23,11 +27,26 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto rem(32);
-        width: rem(130);
-        height: rem(130);
+        width: rem(85);
+        height: rem(85);
 
         border: 1px solid #000;
         border-radius: 50%;
+
+        img {
+            width: rem(65);
+            height: rem(65);
+        }
+
+        @media (min-width: $mobile) {
+            width: rem(175);
+            height: rem(175);
+
+            img {
+                width: rem(130);
+                height: rem(130);
+            }
+        }
     }
     // .item-advantages__text
     &__text {

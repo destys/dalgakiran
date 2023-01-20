@@ -1,6 +1,10 @@
 //<BUTTONS (a.btn+tab)>
 // Снипет (HTML): btn
 
+button {
+	font-size: initial;
+}
+
 .button {
 	display: inline-flex;
 	justify-content: center;

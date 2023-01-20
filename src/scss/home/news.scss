@@ -6,9 +6,13 @@
     // .news__title
     &__title {
         text-align: center;
+        
+        @media (max-width: $mobileSmall) {
+            margin-bottom: rem(40);
+        }
     }
     // .news__list
     &__list {
-        @include gridCards(fit, rem(300), 1fr, rem(30));
+        @include gridCards(fit, rem(250), 1fr, rem(30));
     }
 }

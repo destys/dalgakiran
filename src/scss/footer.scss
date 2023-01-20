@@ -7,36 +7,48 @@
     // .footer__container
     &__container {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: rem(20);
+
+        @media (min-width: $mobile) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
     // .footer__logo
     &__logo {
-        flex: 0 0 rem(254);
-        span {
-            display: block;
-            margin-top: rem(18);
-            font-weight: 700;
-            line-height: math.div(34, 27);
-            font-size: rem(27);
-            color: #2e2e30;
-            text-align: center;
+        max-width: 50%;
+
+        img {
+            width: 100%;
+        }
+
+        @media (min-width: $tablet) {
+            flex: 0 0 rem(254);
         }
     }
     // .footer__contacts
     &__contacts {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        gap: rem(20);
 
         flex: 1 1 auto;
 
-        max-width: rem(745);
+        max-width: rem(300);
+
+        @media (min-width: $tablet) {
+            flex-direction: row;
+            max-width: rem(745);
+        }
     }
 }
 .contacts-footer {
     // .contacts-footer__item
     &__item {
-        
         color: #fff;
     }
     // .contacts-footer__title

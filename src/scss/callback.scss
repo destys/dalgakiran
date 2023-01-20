@@ -1,6 +1,7 @@
 .callback {
     padding: rem(30) 0;
     background: url("@img/needhelp-bg.jpg") 0 0 no-repeat;
+    background-size: cover !important;
 
     &._text-white {
         color: #fff;

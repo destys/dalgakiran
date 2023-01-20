@@ -4,14 +4,39 @@
     background: #d5d8dd;
     // .sertificate__container
     &__container {
-        display: flex;
-        gap: rem(45);
+        @media (min-width: $tablet) {
+            display: flex;
+            gap: rem(45);
+        }
+    }
+    // .sertificate__content
+    &__content {
+        ._h2 {
+            @media (max-width: $tablet) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    width: 50%;
+                    flex: 0 0 50%;
+                }
+            }
+
+            @media (max-width: $mobileSmall) {
+                flex-direction: column-reverse;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
     // .sertificate__text
     &__text {
     }
     // .sertificate__image
     &__image {
-        drop-shadow: 0px 0px 12px rgba(0, 0, 0, 0.48);
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.48);
     }
 }
