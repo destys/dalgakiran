@@ -16,7 +16,12 @@ button {
 	color: #fff;
 	text-transform: uppercase;
 
-	transition: background 0.2s ease-in-out, border-coor 0.2s ease-in-out;
+	@media (max-width: $mobileSmall) {
+		padding: rem(10) rem(24);
+		@include adaptiveValue("font-size", 16, 12);
+	}
+
+	transition: background 0.2s ease-in-out, border-color 0.2s ease, color 0.2s ease-in-out;
 
 	&_transparent {
 		background-color: transparent;

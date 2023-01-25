@@ -3,6 +3,10 @@
     background: url("@img/needhelp-bg.jpg") 0 0 no-repeat;
     background-size: cover !important;
 
+    @media print {
+        display: none;
+    }
+
     &._text-white {
         color: #fff;
     }

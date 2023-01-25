@@ -1,32 +1,39 @@
 .product {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: rem(20);
+    padding: rem(20);
     background-color: #fff;
     font-family: $fontMs;
     font-size: rem(14);
     position: relative;
 
-    & > * {
-        border-left: 1px solid #000;
-        padding: rem(11);
-        align-self: center;
+    @media (min-width: $mobile) {
+        flex-direction: row;
+
+        & > * {
+            border-left: 1px solid #000;
+            padding: rem(11);
+            align-self: center;
+        }
     }
+
     // .product__compare
     &__compare {
         position: absolute;
         top: rem(10);
         right: rem(17);
-        padding: 0;
+        padding: 0 !important;
         z-index: 1;
-        border: 0;
+        border: 0 !important;
         cursor: pointer;
 
         input {
             opacity: 0;
             &:checked + label {
-                &::before{
-                    content:'выбран';
+                &::before {
+                    content: "выбран";
                     font-weight: 700;
                     text-decoration: none;
                     color: $red;
@@ -36,8 +43,8 @@
 
         label {
             cursor: pointer;
-            &::before{
-                content:'к сравнению';
+            &::before {
+                content: "к сравнению";
                 text-decoration: underline;
             }
         }
@@ -47,7 +54,11 @@
         display: block;
         padding-left: rem(11);
         border: 0;
-        width: rem(158);
+        width: rem(154);
+
+        img {
+            width: 100%;
+        }
     }
     // .product__title
     &__title {
@@ -72,12 +83,12 @@
     &__param {
         text-align: center;
         font-size: rem(16);
-        width: rem(178);
+        width: rem(160);
     }
     // .product__actions
     &__actions {
-        padding-top: rem(36);
-        border: 0;
+        padding-top: rem(36) !important;
+        border: 0 !important;
     }
     // .product__price
     &__price {
@@ -98,6 +109,7 @@
         border-radius: 12px;
         font-weight: 700;
         font-size: rem(18);
+        @include adaptiveValue("font-size", 18, 14);
         text-transform: lowercase;
     }
 }

@@ -27,4 +27,5 @@
 ._h1 {
     line-height: math.div(44, 32);
     font-size: rem(32);
+    @include adaptiveValue("font-size", 32, 24);
 }

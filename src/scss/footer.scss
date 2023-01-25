@@ -4,6 +4,10 @@
     background-color: $mainColor;
     box-shadow: inset 0px 4px 40px #000000;
 
+    @media print {
+        display: none;
+    }
+
     // .footer__container
     &__container {
         display: flex;

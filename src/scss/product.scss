@@ -1,0 +1,227 @@
+.product {
+    // .product_page
+    &_page {
+        padding-top: rem(40);
+        padding-bottom: rem(75);
+        background-color: #d5d8dd;
+    }
+    // .product__container
+    &__container {
+    }
+    // .product__wrapper
+    &__wrapper {
+        @media (min-width: $tablet) {
+            display: grid;
+            gap: rem(30);
+            grid-template-columns: rem(308) minmax(rem(308), 1fr);
+        }
+    }
+    // .product__info
+    &__info {
+    }
+}
+.info-product {
+    // .info-product__title
+    &__title {
+        margin-bottom: rem(20);
+    }
+    // .info-product__actions
+    &__actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(30);
+        margin-bottom: rem(20);
+
+
+		@media print {
+			display: none;
+		}
+    }
+    // .info-product__row
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+
+        @media (min-width: $tablet) {
+            flex-direction: row;
+        }
+    }
+    // .info-product__gallery
+    &__gallery {
+        margin: 0 auto;
+        flex: 1 1 auto;
+        max-width: rem(532);
+
+        @media (min-width: $tablet) {
+            margin: 0;
+        }
+    }
+    // .info-product__slider
+    &__slider {
+    }
+    // .info-product__wrapper
+    &__wrapper {
+    }
+    // .info-product__slide
+    &__slide {
+        padding: rem(45) rem(55);
+        background-color: #fff;
+
+        img {
+            width: 100%;
+        }
+    }
+    // .info-product__char
+    &__char {
+        margin-bottom: rem(32);
+        flex: 0 0 rem(420);
+    }
+    // .info-product__description
+    &__description {
+        h2 {
+            font-weight: 500;
+            margin-bottom: rem(20);
+        }
+
+        h3 {
+            margin: rem(20) 0;
+            @include adaptiveValue("font-size", 21, 16);
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: rem(20);
+        }
+
+        ul {
+            margin: rem(20) 0;
+            li {
+                list-style: inside;
+            }
+        }
+    }
+    // .info-product__offer
+    &__offer {
+        margin-top: rem(55);
+        padding: rem(25);
+        background-color: #2d2c2c;
+        color: #fff;
+
+        @media print {
+            display: none;
+        }
+
+        h3 {
+            margin-bottom: rem(20);
+            text-align: center;
+        }
+
+        p {
+            margin: 0 auto;
+            max-width: rem(696);
+            font-weight: 600;
+            @include adaptiveValue("font-size", 18, 14);
+            text-align: center;
+        }
+    }
+}
+
+.actions-product {
+    // .actions-product__add-compare
+    &__add-compare {
+    }
+    // .actions-product__print
+    &__print {
+    }
+    // .actions-product__compare
+    &__compare {
+        display: flex;
+        align-items: center;
+        gap: rem(5);
+        flex: 0 0 rem(175);
+        padding: rem(6) rem(18);
+        background-color: $red;
+
+        font-family: $fontMs;
+        font-weight: 600;
+        font-size: rem(14);
+        color: #fff;
+
+        span {
+            white-space: nowrap;
+        }
+    }
+}
+.char-product {
+    // .char-product__table
+    &__table {
+        margin-bottom: rem(12);
+        width: 100%;
+        border-collapse: collapse;
+        thead,
+        tfoot {
+            background-color: $mainColor;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        td,
+        th {
+            padding: rem(11) 0;
+            border: none;
+
+            &:first-child {
+                padding-left: rem(15);
+                text-align: left;
+            }
+
+            &:last-child {
+                padding-right: rem(15);
+                text-align: right;
+            }
+        }
+
+        tbody {
+            td {
+                border-bottom: 1px solid $mainColor;
+            }
+        }
+    }
+    // .char-product__actions
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(20);
+
+        @media print {
+            display: none;
+        }
+
+        .button {
+            white-space: nowrap;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: $fontMs;
+
+            &:hover {
+                box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+            }
+
+            // .button_transparent
+            &_transparent {
+                border-color: $mainColor;
+                color: $mainColor;
+
+                &:hover {
+                    border-color: $red;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
