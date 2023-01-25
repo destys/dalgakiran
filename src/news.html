@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Новости"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="news_page">
+                <div class="news__container">
+                    <div class="news__wrapper">
+                        <aside class="catalog__side side-catalog">
+                            <div data-spollers="992,max" class="spollers">
+                                <div class="spollers__item">
+                                    <button type="button" data-spoller
+                                        class="spollers__title side-catalog__title">КАТАЛОГ ОБОРУДОВАНИЯ</button>
+                                    <div class="spollers__body">
+                                        <div class="side-catalog__menu menu-side">
+                                            <nav class="menu-side__nav">
+                                                <ul class="menu-side__list">
+                                                    <li class="menu-side__item _active-link">
+                                                        <a href="" class="menu-side__link">Винтовые компрессоры</a>
+                                                        <ul class="submenu">
+                                                            <li class="menu-side__item">
+                                                                <a href="" class="menu-side__link">IMPETUS</a>
+                                                            </li>
+                                                            <li class="menu-side__item">
+                                                                <a href="" class="menu-side__link">TIDY</a>
+                                                            </li>
+                                                            <li class="menu-side__item">
+                                                                <a href="" class="menu-side__link">INVERSYS Plus</a>
+                                                            </li>
+                                                            <li class="menu-side__item">
+                                                                <a href="" class="menu-side__link">INVERSYS DPR</a>
+                                                            </li>
+                                                            <li class="menu-side__item">
+                                                                <a href="" class="menu-side__link">DVK</a>
+                                                            </li>
+                                                            <li class="menu-side__item">
+                                                                <a href="" class="menu-side__link">ECCOAIR</a>
+                                                            </li>
+                                                            <li class="menu-side__item">
+                                                                <a href="" class="menu-side__link">DVK D</a>
+                                                            </li>
+                                                            <li class="menu-side__item">
+                                                                <a href="" class="menu-side__link">DPR D</a>
+                                                            </li>
+                                                            <li class="menu-side__item">
+                                                                <a href="" class="menu-side__link">EAGLE</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-side__item">
+                                                        <a href="" class="menu-side__link">Поршневые компрессоры</a>
+                                                    </li>
+                                                    <li class="menu-side__item">
+                                                        <a href="" class="menu-side__link">Спиральные компрессоры</a>
+                                                    </li>
+                                                    <li class="menu-side__item">
+                                                        <a href="" class="menu-side__link">Подготовка сжатого
+                                                            воздуха</a>
+                                                    </li>
+                                                    <li class="menu-side__item">
+                                                        <a href="" class="menu-side__link">Воздуходувки</a>
+                                                    </li>
+                                                    <li class="menu-side__item">
+                                                        <a href="" class="menu-side__link">Дизельные компрессоры</a>
+                                                    </li>
+                                                    <li class="menu-side__item">
+                                                        <a href="" class="menu-side__link">Генераторы азота</a>
+                                                    </li>
+                                                    <li class="menu-side__item">
+                                                        <a href="" class="menu-side__link">Трубопровод сжатого
+                                                            воздуха</a>
+                                                    </li>
+                                                    <li class="menu-side__item">
+                                                        <a href="" class="menu-side__link">Компрессорная “под ключ”</a>
+                                                    </li>
+                                                    <li class="menu-side__item">
+                                                        <a href="" class="menu-side__link">Техническое обслуживание</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                        <div class="news__inner">
+                            <div class="crumbs">
+                                Главная > Каталог > Винтовые компрессоры
+                            </div>
+                            <h1 class="catalog__title _h1">Новости</h1>
+                            <div class="news__list">
+                                @@include('html/_post-item.htm',{})
+                                @@include('html/_post-item.htm',{})
+                                @@include('html/_post-item.htm',{})
+                                @@include('html/_post-item.htm',{})
+                                @@include('html/_post-item.htm',{})
+                                @@include('html/_post-item.htm',{})
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="callback _text-white" style="background: url('@img/cb-bg.jpg') 0 0 no-repeat;">
+                <div class="callback__container">
+                    <h2 class="callback__title _h2">Нужна помощь?</h2>
+                    <form action="#" class="callback__form form">
+                        <div class="form__row">
+                            <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                placeholder="*Ваше имя" class="input">
+                            <input autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
+                                placeholder="*Ваш телефон" class="input">
+                            <input autocomplete="off" type="email" name="form[]" data-error="Ошибка"
+                                placeholder="*Ваша почта" class="input">
+                        </div>
+                        <button type="submit" class="button">ЗАКАЗАТЬ ЗВОНОК</button>
+                        <p class="form__privacy">
+                            *На сайте действует политика конфедициональности
+                            персональных данных
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

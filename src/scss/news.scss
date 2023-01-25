@@ -1,0 +1,22 @@
+.news {
+    // .news_page
+    &_page {
+        padding-top: rem(40);
+        padding-bottom: rem(75);
+        background-color: $greybg;
+    }
+    // .news__container
+    &__container {
+    }
+    // .news__wrapper
+    &__wrapper {
+        @media (min-width: $tablet) {
+            display: grid;
+            gap: rem(30);
+            grid-template-columns: rem(308) minmax(rem(308), 1fr);
+        }
+    }
+    // .news__list
+    &__list {
+    }
+}

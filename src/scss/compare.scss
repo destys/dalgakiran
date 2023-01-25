@@ -1,0 +1,97 @@
+.compare {
+    padding: rem(40) 0 rem(75);
+    background: #d5d8dd;
+    // .compare__container
+    &__container {
+    }
+    // .compare__title
+    &__title {
+        margin: rem(20) 0;
+    }
+    // .compare__scroll
+    &__scroll {
+        @media (max-width: $tablet) {
+            overflow-x: scroll;
+        }
+    }
+
+    // .compare__table
+    &__table {
+        border: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        background: #e2e6ec;
+
+        td,
+        th {
+            border: 2px solid #fff;
+        }
+        tr:first-child th {
+            border-top: 0;
+        }
+        tr:last-child td {
+            border-bottom: 0;
+        }
+        tr td:first-child,
+        tr th:first-child {
+            border-left: 0;
+        }
+        tr td:last-child,
+        tr th:last-child {
+            border-right: 0;
+        }
+
+        thead {
+            th {
+                text-align: center;
+                position: relative;
+                transition: transform 0.2s ease-in-out;
+                padding: rem(20);
+                text-align: center;
+                background-color: #fff;
+
+                &:first-child {
+                    background-color: #e2e6ec;
+                }
+
+                a {
+                    &._del {
+                        position: absolute;
+                        top: rem(10);
+                        right: rem(10);
+                    }
+
+                    &._product {
+                        img {
+                            margin-bottom: rem(16);
+                            max-width: rem(218);
+                        }
+
+                        p {
+                            margin-bottom: rem(5);
+                            font-size: rem(14);
+                            color: $red;
+                        }
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.72);
+                    transform: scale(1.05);
+                }
+            }
+        }
+        tbody {
+            background: #e2e6ec;
+            td {
+                text-align: center;
+                &:first-child {
+                    padding: rem(9) rem(15);
+                    background-color: $mainColor;
+                    color: #fff;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
