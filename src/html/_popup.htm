@@ -1,11 +1,71 @@
-<!-- 
-<div id="popup" aria-hidden="true" class="popup">
+<div id="success" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+			<button data-close type="button" class="popup__close">
+				<img src="@img/cross.svg" alt="cross">
+			</button>
+			<div class="popup__text p_success">
+				<div class="p_success__icon">
+					<img src="@img/big-check.svg" alt="big-check">
+				</div>
+				<div class="p_success__title">Спасибо за заявку</div>
+				<div class="p_success__subtitle">Мы свяжемся с вами в ближайшее время!</div>
 			</div>
 		</div>
 	</div>
 </div>
- -->
+
+<div id="order" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">
+				<img src="@img/cross.svg" alt="cross">
+			</button>
+			<div class="popup__text p_order">
+				<div class="p_order__title"></div>
+				<div class="p_order__image">
+					
+				</div>
+				<div class="p_order__price"></div>
+				<div class="p_order__subtitle">Свяжитесь с нами</div>
+				<div class="p_order__form form">
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="*Имя"
+						class="input">
+					<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="*+7 (___) ___-__-__" class="input">
+					<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="*Почта"
+						class="input">
+					<textarea autocomplete="off" name="form[]" placeholder="Комментарий к заказу" data-error="Ошибка"
+						class="input"></textarea>
+					<button type="submit" class="button">Отправить</button>
+					<p class="privacy">*На сайте действует политика конфиденциальности
+						персональных данных</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="callback" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">
+				<img src="@img/cross.svg" alt="cross">
+			</button>
+			<div class="popup__text p_order">
+				<div class="p_order__title">Свяжитесь с нами</div>
+				<div class="p_order__form form">
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="*Имя"
+						class="input">
+					<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="*+7 (___) ___-__-__" class="input">
+					<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="*Почта"
+						class="input">
+					<textarea autocomplete="off" name="form[]" placeholder="Комментарий к заказу" data-error="Ошибка"
+						class="input"></textarea>
+					<button type="submit" class="button">Отправить</button>
+					<p class="privacy">*На сайте действует политика конфиденциальности
+						персональных данных</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

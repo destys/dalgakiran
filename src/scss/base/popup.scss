@@ -24,6 +24,12 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+
+	&__close {
+		position: absolute;
+		top: rem(15);
+		right: rem(15);
+	}
 }
 .popup_show {
 	z-index: 150;
@@ -50,12 +56,94 @@ body::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
+	background-color: #d5d8dd;
+	padding: rem(40) rem(35);
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: rem(516);
+	border-radius: 21px;
+	position: relative;
+
 	.lock & {
 		visibility: visible;
+	}
+}
+
+.p_success {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	// .p_success__icon
+	&__icon {
+		margin-top: rem(50);
+		margin-bottom: rem(20);
+	}
+	// .p_success__title
+	&__title {
+		margin-bottom: rem(10);
+		font-weight: 700;
+		@include adaptiveValue("font-size", 27, 21);
+	}
+	// .p_success__subtitle
+	&__subtitle {
+		font-weight: 700;
+	}
+}
+.p_order {
+	text-align: center;
+
+	// .p_order__title
+	&__title {
+		margin-bottom: rem(10);
+		font-weight: 700;
+		@include adaptiveValue("font-size", 27, 21);
+	}
+	// .p_order__image
+	&__image {
+		margin-bottom: rem(6);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+
+			max-height: rem(252);
+		}
+	}
+	// .p_order__price
+	&__price {
+		margin-bottom: rem(16);
+		font-weight: 700;
+		@include adaptiveValue("font-size", 27, 21);
+	}
+	// .p_order__subtitle
+	&__subtitle {
+		margin-bottom: rem(10);
+		@include adaptiveValue("font-size", 27, 21);
+	}
+	// .p_order__form
+	&__form {
+		.input {
+			margin-bottom: rem(15);
+			padding: rem(14) rem(16);
+			border: 1px solid $mainColor;
+			background-color: #fff;
+
+			&::placeholder {
+				color: #acb1b8;
+			}
+
+			&:last-child {
+				margin-bottom: rem(30);
+			}
+		}
+		.button {
+			margin-bottom: rem(15);
+		}
+		.privacy {
+		}
+
+		textarea.input {
+			height: rem(106);
+		}
 	}
 }

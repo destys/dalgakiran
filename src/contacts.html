@@ -8,25 +8,77 @@
     <div class="wrapper">
         @@include('html/_header.htm',{})
         <main class="page">
-           
-            <section class="callback _text-white" style="background: url('@img/cb-bg.jpg') 0 0 no-repeat;">
-                <div class="callback__container">
-                    <h2 class="callback__title _h2">Нужна помощь?</h2>
-                    <form action="#" class="callback__form form">
-                        <div class="form__row">
-                            <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
-                                placeholder="*Ваше имя" class="input">
-                            <input autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
-                                placeholder="*Ваш телефон" class="input">
-                            <input autocomplete="off" type="email" name="form[]" data-error="Ошибка"
-                                placeholder="*Ваша почта" class="input">
+            <section class="contacts">
+                <div class="contacts__container">
+                    <div class="crumbs">
+                        Главная > Каталог > Винтовые компрессоры
+                    </div>
+                    <h1 class="contacts__title _h1" data-popup="#callback">Контакты</h1>
+                    <div class="contacts__wrapper">
+                        <div class="info-contacts__col">
+                            <div class="info-contacts__city">г. Москва</div>
+                            <div class="info-contacts__item">
+                                <img src="@img/location.svg" alt="icon-location">
+                                <span>111123, Россия, Москва, <br /> шоссе Энтузиастов, д. 56</span>
+                            </div>
+                            <div class="info-contacts__item">
+                                <img src="@img/phone.svg" alt="icon-phone">
+                                <a href="tel:+74957773319">+7 (495) 777-33-19</a>
+                            </div>
+                            <div class="info-contacts__item">
+                                <img src="@img/envelope.svg" alt="icon-envelope">
+                                <a href="mailto:sale@aignep-russia.com">sale@aignep-russia.com</a>
+                            </div>
+                            <div class="info-contacts__item">
+                                <img src="@img/clock.svg" alt="icon-clock">
+                                Режим работы: <br />
+                                Пн-Вт - 9:00 - 18:00 <br />
+                                Сб - 9:00 - 15:00 <br />
+                                Вс - выходной <br />
+                            </div>
                         </div>
-                        <button type="submit" class="button">ЗАКАЗАТЬ ЗВОНОК</button>
-                        <p class="form__privacy">
-                            *На сайте действует политика конфедициональности
-                            персональных данных
-                        </p>
-                    </form>
+                        <div class="info-contacts__col">
+                            <div class="info-contacts__city">г. Санкт-Петербург</div>
+                            <div class="info-contacts__item">
+                                <img src="@img/location.svg" alt="icon-location">
+                                <span>194021, Санкт-Петербург, <br /> ул. Политехническая, 24</span>
+                            </div>
+                            <div class="info-contacts__item">
+                                <img src="@img/phone.svg" alt="icon-phone">
+                                <a href="tel:+7 (812) 647-06-07">+7 (812) 647-06-07</a>
+                            </div>
+                            <div class="info-contacts__item">
+                                <img src="@img/envelope.svg" alt="icon-envelope">
+                                <a href="mailto:sale@aignep-russia.com">sale@aignep-russia.com</a>
+                            </div>
+                            <div class="info-contacts__item">
+                                <img src="@img/sertificate-contacts.jpg" alt="contacts-sertificate"
+                                    class="_sertificate">
+                            </div>
+                        </div>
+                        <div class="contacts__form form">
+                            <div class="form__row">
+                                <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                    placeholder="*Ваше имя" class="input">
+                                <input autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
+                                    placeholder="*Ваш телефон" class="input">
+                            </div>
+                            <div class="form__label">
+                                <span>Введите сообщение</span>
+                                <textarea autocomplete="off" name="form[]" placeholder="" data-error="Ошибка"
+                                    class="input"></textarea>
+                            </div>
+                            <button type="submit" class="button">Отправить</button>
+                            <p class="privacy">*На сайте действует политика конфиденциональности
+                                персональных данных </p>
+                        </div>
+                    </div>
+                    <div class="contacts__map">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?ll=37.766773%2C55.760748&mode=whatshere&whatshere%5Bpoint%5D=37.766756%2C55.760707&whatshere%5Bzoom%5D=17&z=16"
+                            height="572" frameborder="1" allowfullscreen="true" style="position:relative;">
+                        </iframe>
+                    </div>
                 </div>
             </section>
         </main>
