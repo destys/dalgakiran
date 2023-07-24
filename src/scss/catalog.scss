@@ -98,6 +98,8 @@
     }
     // .catalog__item
     &__item {
+        display: flex;
+        flex-direction: column;
         transition: box-shadow 0.2s ease-in-out;
         &:hover {
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.72);
@@ -223,6 +225,7 @@
         background-color: #fff;
 
         height: rem(253);
+        flex: 0 0 rem(253);
 
         img {
             width: 100%;
@@ -232,11 +235,13 @@
     }
     // .item-catalog__title
     &__title {
+        flex: 1 1 auto;
+
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 rem(72);
-        height: rem(93);
+        padding: rem(15) rem(35);
         background-color: #2d2c2c;
 
         font-family: $fontMs;
@@ -244,6 +249,10 @@
         font-size: rem(18);
         text-align: center;
         color: #fff;
+
+        span {
+            font-weight: 700;
+        }
     }
 }
 
@@ -265,7 +274,6 @@
     }
     // .filters-catalog__add
     &__add {
-        margin-top: rem(20);
         color: #fff;
     }
 }

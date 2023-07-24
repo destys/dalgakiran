@@ -2,7 +2,8 @@
     margin-bottom: 15px;
     position: relative;
 
-    background: url("@img/fon.jpg");
+    background: url("@img/fon.jpg") center center no-repeat;
+    background-size: cover;
 
     // .intro__slider
     &__slider {
@@ -14,7 +15,7 @@
     &__slide {
         padding-top: rem(24);
         min-width: 100vw;
-        min-height: rem(500);
+        min-height: rem(640);
         position: relative;
 
         background-size: cover !important;
