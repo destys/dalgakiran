@@ -93,7 +93,7 @@
     }
     // .catalog__list
     &__list {
-        @include gridCards("fit", rem(250), 1fr, rem(30));
+        @include gridCards("fill", rem(250), 1fr, rem(30));
         margin-bottom: rem(25);
     }
     // .catalog__item
